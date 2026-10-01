@@ -1,0 +1,71 @@
+/* Estilos específicos da aplicação — o Bootstrap cuida do resto */
+
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #212529;
+}
+
+#tabela-pacientes tr {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.tabela-pacientes thead th {
+  border-bottom-width: 0;
+  color: #fff;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tabela-pacientes thead {
+  --bs-table-bg: var(--bs-primary);
+  --bs-table-color: #fff;
+}
+
+.tabela-pacientes tbody td {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+#ordenar {
+  user-select: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.anima-aceno {
+  display: inline-block; 
+  transition: transform 0.2s;
+  /* Margem opcional para afastar o ícone do texto */
+  margin-right: 8px; 
+}
+
+button:hover .anima-aceno {
+  animation: balanco 0.6s ease-in-out infinite alternate;
+}
+
+.wrapper-input:hover .anima-aceno,
+.wrapper-input:focus-within .anima-aceno {
+  animation: crescer 0.6s ease-in-out infinite alternate;
+  color: #0d6efd !important; /* Cor azul do Bootstrap */
+}
+
+@keyframes balanco {
+  0% { transform: scale(1.1) rotate(-15deg); }
+  100% { transform: scale(1.1) rotate(15deg); }
+}
+@keyframes crescer{
+  0% { transform: scale(1) }
+  100% { transform: scale(1.2)}
+}
